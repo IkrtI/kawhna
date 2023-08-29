@@ -1,4 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion)");
 const sections = document.querySelectorAll(".page-content__section");
@@ -10,7 +15,7 @@ const updateMarqueeText = () => {
     marquee.classList.add("active");
     marquee.addEventListener("transitionend", () => {
       marquee.classList.remove("active");
-      marquee.innerText = `${marqueeText} ${["😎", "🤓", "🤩", "😏", "😼"][R(3)]} `.repeat(30);
+      marquee.innerText = `${marqueeText} ${["😎", "🤓", "🤩", "😏", "😼"][R(5)]} `.repeat(30);
     });
   });
 };
@@ -59,5 +64,5 @@ function R(Max = 1) {
   return Math.floor(Math.random() * Max);
 }
 
-console.log("Cr. https://codepen.io/hexagoncircle/pen/xxwBLMy");
-console.log("ขอบคุณที่เข้ามาเยี่ยมชม \nIG: ikrt.dev");
+console.log("GSAP ScrollTrigger Cr. https://codepen.io/hexagoncircle/pen/xxwBLMy\nScroll progress Cr.https://codepen.io/Mamboleoo/pen/abdwYaJ");
+console.log("ขอบคุณที่เข้ามาเยี่ยมชม \nEmail: contact@ikrt.dev");
