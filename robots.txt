@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kawhna.ikrt.dev/sitemap.xml
