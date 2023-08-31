@@ -25,6 +25,7 @@ const updateBgColor = (color) =>
 
 const setActiveSection = (section) => {
   marqueeText = section.querySelector("h2").textContent;
+  if(!section.querySelector("h2")) marqueeText = section.querySelector("h1").textContent;
   [...sections].forEach((section) => section.classList.remove("active"));
   section.classList.add("active");
   !prefersReducedMotion.matches && updateBgColor(section.dataset.bgColor);
