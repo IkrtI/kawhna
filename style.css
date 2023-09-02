@@ -322,20 +322,26 @@ p {
 }
 
 .card {
-  background-color: white;
+  background-color: #171717;
   border-radius: 25px;
   margin-top: 30px;
 }
 
 .card p {
   color: black;
-  font-size: x-large;
-}
-
-.cotton {
-  margin-top: -1%;
+  background-color: #00ff37;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+  font-size: 30px;
 }
 
 .card img {
   margin-top: -10%;
+}
+
+.modal {
+  display: none;
 }
