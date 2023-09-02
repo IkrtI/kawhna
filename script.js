@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('progress', {
   value: 100,
@@ -13,19 +14,24 @@ let marqueeText = "";
 const updateMarqueeText = () => {
   [...marquees].forEach((marquee) => {
     marquee.classList.add("active");
-    marquee.addEventListener("transitionend", () => {
-      marquee.classList.remove("active");
-      marquee.innerText = `${marqueeText} ${["😎", "🤓", "🤩", "😏", "😼"][R(5)]} `.repeat(30);
-    });
+
+    marquee.addEventListener("webkitTransitionEnd", () => FText(marquee, marqueeText));
+    marquee.addEventListener("transitionend", () => FText(marquee, marqueeText));
   });
 };
+
+const FText = (marquee, marqueeText) => {
+  {
+    marquee.classList.remove("active");
+    marquee.innerText = `${marqueeText} ${["😎", "🤓", "🤩", "😏", "😼"][R(5)]} `.repeat(30);
+  }
+}
 
 const updateBgColor = (color) =>
   document.documentElement.style.setProperty("--color-background", color);
 
 const setActiveSection = (section) => {
   marqueeText = section.querySelector("h2").textContent;
-  if(!section.querySelector("h2")) marqueeText = section.querySelector("h1").textContent;
   [...sections].forEach((section) => section.classList.remove("active"));
   section.classList.add("active");
   !prefersReducedMotion.matches && updateBgColor(section.dataset.bgColor);
