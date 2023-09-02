@@ -1,4 +1,6 @@
 
+const Emoji = ["😎", "🤓", "🤩", "😏", "😼"][R(5)]
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('progress', {
   value: 100,
@@ -21,11 +23,11 @@ const updateMarqueeText = () => {
 };
 
 const FText = (marquee, marqueeText) => {
-  {
-    marquee.classList.remove("active");
-    marquee.innerText = `${marqueeText} ${["😎", "🤓", "🤩", "😏", "😼"][R(5)]} `.repeat(30);
-  }
+  console.log("FText");
+  marquee.classList.remove("active");
+  marquee.innerText = `${marqueeText} ${Emoji} `.repeat(30);
 }
+
 
 const updateBgColor = (color) =>
   document.documentElement.style.setProperty("--color-background", color);

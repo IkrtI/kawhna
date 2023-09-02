@@ -24,7 +24,6 @@
 
 progress {
   position: fixed;
-  top: 0;
   left: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -61,6 +60,31 @@ progress::-moz-progress-bar {
   );
   background-attachment: fixed;
 }
+
+#progress-top {
+  top: 0;
+}
+
+#progress-bottom {
+  direction: rtl;
+  bottom: 0;
+}
+
+/* #progress-left {
+  width: 101vh;
+  height: 1px;
+  left: 49.9vh;
+  top: 49%;
+  transform: rotate(90deg);
+}
+
+#progress-right {
+  width: 101vh;
+  height: 1px;
+  left: -49.9vh;
+  top: 49%;
+  transform: rotate(90deg);
+} */
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -294,13 +318,13 @@ p {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .card {
   background-color: white;
   border-radius: 25px;
   margin-top: 30px;
-
 }
 
 .card p {
