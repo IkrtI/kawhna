@@ -322,6 +322,7 @@ p {
 }
 
 .card {
+  mix-blend-mode: difference;
   background-color: #171717;
   border-radius: 25px;
   margin-top: 30px;
@@ -344,4 +345,36 @@ p {
 
 .modal {
   display: none;
+}
+
+.policy-card {  mix-blend-mode: difference;
+
+  background-color: #432f54;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.policy-card-title {
+  line-height: 1.75;
+  margin-top: 30px;
+  letter-spacing: 0.0125rem;
+  color: rgb(255, 255, 255);
+  background-color: #fff;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(76deg, #f60, rgb(123, 3, 197));
+  font-size: 30px;
+  /* font-size: xx-large; */
+}
+
+.policy-card-text{
+  /* font-size: 15px; */
+  line-height: 1.75;
+  margin-top: 3px;
+  letter-spacing: 0.0125rem;
 }
