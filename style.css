@@ -351,14 +351,14 @@ p {
 
   background-color: #432f54;
   border-radius: 25px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  /* margin-top: 30px; */
+  margin-bottom: 15px;
   padding: 20px;
 }
 
 .policy-card-title {
   line-height: 1.75;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   letter-spacing: 0.0125rem;
   color: rgb(255, 255, 255);
   background-color: #fff;
