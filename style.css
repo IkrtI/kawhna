@@ -362,12 +362,13 @@ p {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-size: 30px;
+  display: none;
 }
 
 .card img {
-  margin-top: 1%; 
-  border: 1px solid #f3e3d989;
-  padding: 1px;
+  /* margin-top: 1%;  */
+  /* border: 1px solid #f3e3d989;
+  padding: 1px; */
 }
 
 /* .modal {

@@ -92,3 +92,26 @@ console.log("ขอบคุณที่เข้ามาเยี่ยมช�
 //     }
 //   }
 // }, 1000);
+
+[...gsap.utils.toArray(".card"), ...gsap.utils.toArray(".policy-card")].forEach(
+  (heading) => {
+    ScrollTrigger.create({
+      trigger: heading,
+      onEnter: function () {
+        const top = heading.getBoundingClientRect().top;
+        const windowTop = window.scrollY;
+        if (windowTop >= top) {
+          heading.classList.add("animate__zoomIn");
+        }
+      },
+      onLeave: function () {
+        const bottom = heading.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+
+        if (bottom <= windowHeight) {
+          heading.classList.remove("animate__zoomIn");
+        }
+      },
+    });
+  }
+);
