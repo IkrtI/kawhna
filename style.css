@@ -376,9 +376,9 @@ p {
 } */
 
 .policy-card {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   border: 1px solid #f3e3d989;
-  background-color: #432f54;
+  background-color: #ffffff;
   border-radius: 25px;
   /* margin-top: 30px; */
   margin-bottom: 15px;
@@ -396,13 +396,14 @@ p {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(76deg, #f60, rgb(123, 3, 197));
+  background-image: linear-gradient(76deg, rgb(0, 167, 161), rgb(46, 255, 19));
   font-size: 30px;
   /* font-size: xx-large; */
 }
 
 .policy-card-text {
   /* font-size: 15px; */
+  color: #000;
   line-height: 1.75;
   margin-top: 3px;
   letter-spacing: 0.0125rem;
